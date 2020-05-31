@@ -2,7 +2,7 @@
 
 ## 简答题
 
-1、描述引用计数的工作原理和优缺点
+<b>1、描述引用计数的工作原理和优缺点</b>
 
 答：工作原理，在程序开始执行的时候，会设置引用数。当数据被引用的时候，引用数会增加，取消引用的时候，引用数减少，当引用数为0时，会被 GC 垃圾回收给清除
 
@@ -26,7 +26,7 @@ data()
 
 
 
-2、描述标记整理算法的工作流程
+<b>2、描述标记整理算法的工作流程</b>
 
 答：第一步：和标记清除一致，都会找到所有的活动对象并标记
 
@@ -36,7 +36,7 @@ data()
 
 
 
-3、描述 V8 中新生代存储区垃圾回收的流程
+<b>3、描述 V8 中新生代存储区垃圾回收的流程</b>
 
 答：新生代存储区又分为相同大小的两个区域，使用空间 From 和 空闲空间 To
 
@@ -50,7 +50,7 @@ data()
 
 
 
-4、描述增量标记算法在何时使用，及工作原理。
+<b>4、描述增量标记算法在何时使用，及工作原理</b>
 
 答：增量标记算法会在程序执行的过程中穿插执行，当增量标记算法执行的时候，程序会暂停运行，等待这一轮的算法执行完之后才会继续执行
 
@@ -79,7 +79,7 @@ const cars = [
 
 
 
-1、使用函数组合 fp.flowRight() 重新实现下面这个函数
+<b>1、使用函数组合 fp.flowRight() 重新实现下面这个函数</b>
 
 ```js
 let isLastInStock = function (cars) {
@@ -110,7 +110,7 @@ console.log(res(cars)) // false
 
 
 
-2、使用 fp.flowRight()，fp.prop()，fp.first() 获取第一个 car 的 name
+<b>2、使用 fp.flowRight()，fp.prop()，fp.first() 获取第一个 car 的 name</b>
 
 答：分析：获取数组第一条数据对象的属性值，可以先用 fp.first() 获取第一条数据，再用 fp.prop() 获取属性值，最后再用 fp.flowRight() 将之前两个函数组合起来
 
@@ -130,7 +130,7 @@ console.log(res(cars)) // Ferrari FF
 
 
 
-3、使用帮助函数 _average 重构 averageDollarValue，使用函数组合的方式实现
+<b>3、使用帮助函数 _average 重构 averageDollarValue，使用函数组合的方式实现</b>
 
 ```js
 let _average = function (xs) {
@@ -168,7 +168,7 @@ console.log(res(cars)) // 790700
 
 
 
-4、使用 flowRight 写一个 sanitizeNames() 函数，返回一个下划线连接的小写字符串，把数组中的 name 转换为这种形式：例如：sanitizeNames(["Hello World"]) => ["hello_world"]
+<b>4、使用 flowRight 写一个 sanitizeNames() 函数，返回一个下划线连接的小写字符串，把数组中的 name 转换为这种形式：例如：sanitizeNames(["Hello World"]) => ["hello_world"]</b>
 
 ```js
 let _underscore = fp.replace(/\W+/g, '_') // <-- 无须改动，并在 sanitizeNames 中使用它
@@ -229,7 +229,7 @@ module.exports = {
 
 
 
-1、使用 fp.add(x, y) 和 fp.map(f, x) 创建一个能让 functor 里的值增加的函数 ex1
+<b>1、使用 fp.add(x, y) 和 fp.map(f, x) 创建一个能让 functor 里的值增加的函数 ex1</b>
 
 ```js
 const fp = require('lodash/fp')
@@ -252,7 +252,7 @@ console.log(maybe.map(ex1(2))) // Maybe { _value: [ 7, 8, 13 ] }
 
 
 
-2、实现一个函数 ex2，能够使用 fp.first 获取列表的第一个元素
+<b>2、实现一个函数 ex2，能够使用 fp.first 获取列表的第一个元素</b>
 
 ```js
 const fp = require('lodash/fp')
@@ -275,7 +275,7 @@ console.log(ex2()) // do
 
 
 
-3、实现一个函数 ex3，使用 safeProp 和 fp.first 找到 user 的名字的首字母
+<b>3、实现一个函数 ex3，使用 safeProp 和 fp.first 找到 user 的名字的首字母</b>
 
 ```js
 const fp = require('lodash/fp')
@@ -305,7 +305,7 @@ console.log(userObj('name')) // A
 
 
 
-4、使用 Maybe 重写 ex4，不要有 if 语句
+<b>4、使用 Maybe 重写 ex4，不要有 if 语句</b>
 
 ```js
 const fp = require('lodash/fp')
